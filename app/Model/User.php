@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Model\Order;
 use App\Model\Comments;
+use App\Model\Vote;
 
 class User extends Authenticatable
 {
@@ -41,5 +42,10 @@ class User extends Authenticatable
     public function comments()
     {
         return $this->hasMany(Comments::class);
+    }
+
+    public function vote()
+    {
+        return $this->hasMany(Vote::class);
     }
 }

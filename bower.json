@@ -1,0 +1,24 @@
+{
+  "name": "Y",
+  "description": "",
+  "main": "",
+  "authors": [
+    "quanganhh <anhnqqq@gmail.com>"
+  ],
+  "license": "Y",
+  "keywords": [
+    "Y"
+  ],
+  "homepage": "https://github.com/quanganhh",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "boostrap": "^4.1.3"
+  }
+}
