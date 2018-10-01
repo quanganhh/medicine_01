@@ -1,0 +1,21 @@
+{
+  "name": "Quang Anh",
+  "description": "",
+  "main": "",
+  "authors": [
+    "quanganhh <anhnq@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Font-Awesome": "https://github.com/FortAwesome/Font-Awesome.git#^5.3.1"
+  }
+}
