@@ -3,9 +3,6 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Model\Category;
-use App\Model\OrderDeatail;
-use App\Model\Vote;
 
 class Product extends Model
 {
@@ -14,13 +11,13 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function orderDeatail()
-    {
-        return $this->hasMany(orderDeatail::class);
-    }
-
     public function votes()
     {
         return $this->hasMany(Vote::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }

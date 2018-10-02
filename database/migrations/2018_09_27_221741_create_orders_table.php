@@ -11,8 +11,8 @@ class CreateOrdersTable extends Migration
      *
      * @return void
      */
-    public function up() 
-	{
+    public function up()
+    {
         Schema::enableForeignKeyConstraints();
         Schema::create('orders', function (Blueprint $table) 
         {
@@ -26,8 +26,8 @@ class CreateOrdersTable extends Migration
             $table->string('ship_date')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('shipment_id')->references('id')->on('shipment')->onDelete('cascade');
-            $table->foreign('payment_id')->references('id')->on('payment')->onDelete('cascade');
+            $table->foreign('shipment_id')->references('id')->on('shipments')->onDelete('cascade');
+            $table->foreign('payment_id')->references('id')->on('payments')->onDelete('cascade');
             $table->foreign('order_status_id')->references('id')->on('order_status')->onDelete('cascade');
         });
     }
@@ -37,8 +37,8 @@ class CreateOrdersTable extends Migration
      *
      * @return void
      */
-    public function down() 
-	{
+    public function down()
+    {
         Schema::dropForeign([
             'user_id',
             'shipment_id',

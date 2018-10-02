@@ -3,34 +3,29 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Model\User;
-use App\Model\PaymentMethod;
-use App\Model\Shipping;
-use App\Model\OrderStatus;
-use App\Model\OrderDetail;
 
 class Order extends Model
 {
     protected $fillable = [
         'address',
         'ship_date',
-        'shipping_id',
+        'shipment_id',
         'payment_id',
         'order_status_id',
         'update_at',
     ];
 
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function payment_method()
+    public function payment()
     {
         return $this->belongsTo(PaymentMethod::class);
     }
 
-    public function shipping()
+    public function shipment()
     {
         return $this->belongsTo(Shipping::class);
     }
@@ -40,8 +35,8 @@ class Order extends Model
         return $this->belongsTo(OrderStatus::class);
     }
 
-    public function orderDetail()
+    public function products()
     {
-        return $this->hasMany(OrderDetail::class)
+        return $this->hasMany(Product::class);
     }
 }

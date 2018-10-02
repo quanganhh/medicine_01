@@ -5,7 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use App\Model\Order;
 
-class PaymentMethod extends Model
+class Shippment extends Model
 {
-     return $this->hasMany(Order::class);
+    return $this->hasMany(Order::class);
 }
